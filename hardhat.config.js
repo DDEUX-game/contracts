@@ -1,4 +1,6 @@
 require("@matterlabs/hardhat-zksync-solc");
+require("@nomiclabs/hardhat-ethers");
+require("@nomiclabs/hardhat-waffle");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -12,6 +14,9 @@ module.exports = {
     },
   },
   networks: {
+    hardhat: {
+      chainId: 1337,
+    },
     zksync_testnet: {
       url: "https://zksync2-testnet.zksync.dev",
       ethNetwork: "goerli",
